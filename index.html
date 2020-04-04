@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<form>
+	Enter the passcode to see the content:
+	<input id="pwd" type="text" name="pwd" />
+</form>
+<div id="content" style="display:none;">
 <html>
    <head>
 	  <title>Tse Ho Tung’s Travel Blog</title>
@@ -449,9 +454,13 @@
 			</div>
 		
 			
-			
-			
-			
-
+		
 </body>
 </html>
+<script>
+    $("#pwd").keyup(function() {
+        if ($('#pwd').val() == "123123"){
+            $('#content').show('slow');
+        }
+    });
+</script>
