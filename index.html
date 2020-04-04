@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	  <title>Tse Ho Tung’s Travel Blog</title>
+
+      <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="author" content="Tse Ho Tung">
+	  <meta name="description" content="Tse Ho Tung’s Travel Blog">
+
+      
+      <link rel="stylesheet" href="MidProject_TseHoTung_19018952D.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+	  <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+	  <link href='https://fonts.googleapis.com/css?family=Black And White Picture' rel='stylesheet'>
+	  <link href='https://fonts.googleapis.com/css?family=Rock Salt' rel='stylesheet'>
+	  <link href='https://fonts.googleapis.com/css?family=Mansalva' rel='stylesheet'>
+	  <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	  <script>
+		function imageZoom(imgID, resultID) {
+		  var img, lens, result, cx, cy;
+		  img = document.getElementById(imgID);
+		  result = document.getElementById(resultID);
+		  /*create lens:*/
+		  lens = document.createElement("DIV");
+		  lens.setAttribute("class", "img-zoom-lens");
+		  /*insert lens:*/
+		  img.parentElement.insertBefore(lens, img);
+		  /*calculate the ratio between result DIV and lens:*/
+		  cx = result.offsetWidth / lens.offsetWidth;
+		  cy = result.offsetHeight / lens.offsetHeight;
+		  /*set background properties for the result DIV:*/
+		  result.style.backgroundImage = "url('" + img.src + "')";
+		  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+		  /*execute a function when someone moves the cursor over the image, or the lens:*/
+		  lens.addEventListener("mousemove", moveLens);
+		  img.addEventListener("mousemove", moveLens);
+		  /*and also for touch screens:*/
+		  lens.addEventListener("touchmove", moveLens);
+		  img.addEventListener("touchmove", moveLens);
+		  function moveLens(e) {
+			var pos, x, y;
+			/*prevent any other actions that may occur when moving over the image:*/
+			e.preventDefault();
+			/*get the cursor's x and y positions:*/
+			pos = getCursorPos(e);
+			/*calculate the position of the lens:*/
+			x = pos.x - (lens.offsetWidth / 2);
+			y = pos.y - (lens.offsetHeight / 2);
+			/*prevent the lens from being positioned outside the image:*/
+			if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+			if (x < 0) {x = 0;}
+			if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+			if (y < 0) {y = 0;}
+			/*set the position of the lens:*/
+			lens.style.left = x + "px";
+			lens.style.top = y + "px";
+			/*display what the lens "sees":*/
+			result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+		  }
+		  function getCursorPos(e) {
+			var a, x = 0, y = 0;
+			e = e || window.event;
+			/*get the x and y positions of the image:*/
+			a = img.getBoundingClientRect();
+			/*calculate the cursor's x and y coordinates, relative to the image:*/
+			x = e.pageX - a.left;
+			y = e.pageY - a.top;
+			/*consider any page scrolling:*/
+			x = x - window.pageXOffset;
+			y = y - window.pageYOffset;
+			return {x : x, y : y};
+		  }
+		}
+		</script>
+ 
+ </head>
+ 
+ <body>
+
+			
+			<script>
+			function myFunction(imgs) {
+			  var expandImg = document.getElementById("expandedImg");
+			  var imgText = document.getElementById("imgtext");
+			  expandImg.src = imgs.src;
+			  imgText.innerHTML = imgs.alt;
+			  expandImg.parentElement.style.display = "block";
+			}
+			</script>
+			
+		<ul>
+		  <li><a class="active" href="https://tsehotung.github.io"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+		  <li><a href="#About_Me"><span class="glyphicon">&#xe008;</span>About Me</a></li>
+		  <li><a href="#Netherland"><img src="netherland.png" width="50px">Netherland</a></li>
+		  <li><a href="#Thailand"><img src="Thailand.png" width="50px">Thailand</a></li>
+		  <li><a href="#Taiwan"><img src="Taiwan.png" width="50px">Taiwan</a></li>
+		  <li><a href="#UK"><img src="UK.png" width="50px">United Kingdom</a></li>
+		  <li><a href="#Singapore"><img src="singapore.png" width="50px">Singapore</a></li>
+		  <li><a href="#Korea"><img src="Korea.png" width="50px">Korea</a></li>
+		</ul>
+
+		<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+		<h1>Tse Ho Tung’s Travel Blog</h1>
+		<div id="About_Me" >
+		<div class="grid-container">
+		    <div class="item1">
+		<h3>About Me</h3>
+		</div>
+		 <div class="item2">
+		<img src="me.JPG" class="img-thumbnail"  width="300px"></img>
+		</div>
+		<div class="item3">
+		<p>I am Tse Ho Tung, a travel enthusiast. I love traveling around the world because I love exploring different country’s cultural 
+		and I would like to walk out of my comfort zone. I think that each time of my journey would be my valuable memory in my life, and
+		it could help me to broaden my horizon. I think that living in an unfamiliar country, I could know more about the country, not only 
+		the information that I read from the internet but also have firsthand experience. These are the reasons why I love traveling.
+		</p>
+		</div>
+		 <div class="item4">
+		<h3>Travel</h3>
+		<p>I am going to have a brief introduction about the places I went in 2019/2020. There are total of 6 countries.</p>
+		</div>
+		</div>
+		</div>
+		
+		<div id="Netherland" >
+		<div class="grid-container">
+		<div class="item1">
+		<h2>Netherland</h2>
+		<h4>Netherland, Amsterdam | 31/1/2020-04/2/2020</h4>
+		</div>
+		 <div class="item2">
+		<div class="slideshow-container">
+				<div class="mySlides ">
+				  <div class="numbertext">1 / 3</div>
+				  <img src="n2.jpeg" style="width:50%">
+				  <div class="text">I went to the Netherland by myself. So, I booked a youth hostel for solo traveler named The Generator. The building is gorgeous.</div>
+				</div>
+
+				<div class="mySlides ">
+				  <div class="numbertext">2 / 3</div>
+				  <img src="n1.jpeg" style="width:50%">
+				  <div class="text">I went to Zaanse Schans. It is best known for its collection of well-preserved historic windmills and houses. </div>
+				</div>
+
+				<div class="mySlides ">
+				  <div class="numbertext">3 / 3</div>
+				  <a href="https://en.wikipedia.org/wiki/Stroopwafel" target="_blank">
+				  <img src="n3.jpeg" style="width:50%">
+				</a>
+				  <div class="text">This is the famous snack called stroopwafel. It is a wafer cookie made from two thin layers of baked dough joined by a caramel filling. I love eating it very much!</div>
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+				<br>
+
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+
+
+		</div>
+		</div>
+		</div>
+		
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+			</script>
+
+			<div id="Thailand" >
+			<div class="grid-container">
+			<div class="item1">
+			<h2>Thailand</h2>
+			<h4>Thailand, Hua Hin & Bangkok | 07/01/2020-12/01/2020</h4>
+			<p>It was the 3rd time I went to Thailand. This time, I went to Thailand with my friends. We had a lot of fun.</p>
+			</div>
+			 <div class="item2">
+			<div style="text-align:center">
+					  <h2>Thailand Gallery</h2>
+					  <p>Click on the images below:</p>
+					</div>
+				<div class="grid-container">
+					<div class="row">
+					  <div class="column">
+						<img src="t1.jpeg" alt="We went to Wat Arun. It is a Buddhist temple in Bangkok Yai district of Bangkok, on the Thonburi west bank of the Chao Phraya River. The temple is really spectacular." style="width:40%" onclick="myFunction(this);">
+					  </div>
+					  <div class="column">
+						<img src="t2.jpeg" alt="We went to the Sea Life Bankok Ocean World. There is a buddle inside the aquarium. It’s interesting." style="width:40%" onclick="myFunction(this);">
+					  </div>
+					  <div class="column">
+						<img src="t3.jpeg" alt="These are all the typical Thai food. There are many seafood and the price is really low. I love roast fish the most!" style="width:40%" onclick="myFunction(this);">
+					  </div>
+					</div>
+				</div>
+					<div id="a" class="grid-container">
+					  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+					  <img id="expandedImg" style="width:300px">
+					  <div id="imgtext"></div>
+					</div>
+
+			
+
+					</div>
+					</div>
+					</div>
+					
+			<div id="Taiwan" >
+			<div class="grid-container">
+			<div class="item1">
+			<h2>Taiwan</h2>
+			<h4>Taiwan, Tai Chung | 17/11/2019-19/11/2019</h4>
+			<p>I went to Tai Chung for only 3 days with my mum. What a short trip!</p>
+			</div>
+
+			<div class="item2">
+			  <div id="Tc" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  <li data-target="#Tc" data-slide-to="0" class="active"></li>
+				  <li data-target="#Tc" data-slide-to="1"></li>
+				  <li data-target="#Tc" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+
+				  <div class="item active">
+					<div class="img-zoom-container">
+					<img id="myimage" src="tc1.jpeg" alt="Taiwan" style="width:100%;">
+					<div id="myresult" class="img-zoom-result"></div>
+</div>
+					<div class="carousel-caption">
+					  <p>As my mum wanted to take photo at a landmark of Tai Chung. So, I brought my mum to here. Can you see my mum?</p>
+					</div>
+				  </div>
+				  <script>
+					// Initiate zoom effect:
+					imageZoom("myimage", "myresult");
+					</script>
+
+				  <div class="item">
+					<img src="tc2.jpeg" alt="Taiwan" style="width:100%;">
+					<div class="carousel-caption">
+					  <p>We went paragliding in Puli at the 2nd day of the trip. It was extremely exciting and I love it very much. The view was beautiful but my mum and I felt dizzy after playing.</p>
+					</div>
+				  </div>
+				
+				  <div class="item">
+					<img src="tc3.jpeg" alt="Taiwan" style="width:100%;">
+					<div class="carousel-caption">
+					  <p>This is one of the classic Taiwan breakfast. It is made with eggs, flour, salt and you can choose the food that you want to eat with. It is delicious!</p>
+					</div>
+				  </div>
+			  
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#Tc" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#Tc" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+			</div>
+			</div>
+			</div>
+			
+			<div id="UK" >
+			<div class="grid-container">
+			<div class="item1">
+			<h2>United Kingdom</h2>
+			<h4>United Kingdom, London | 14/07/2019-03/08/2019</h4>
+			<p>I went to London because I joined a study tour and I had a 3-week summer course. The school had taken students to sightseeing too. It was a meaningful summer.</p>
+			 </div>
+			 <div class="item2">
+				  <div class="thumbnail">
+					<a href="uk1.jpeg" target="_blank">
+					  <img src="uk1.jpeg" alt="UK" style="width:40%">
+					  <div class="caption">
+						<p>I went to the British Museum which is a public institution dedicated to human history, art and culture. It is a must to go if you come London.</p>
+					  </div>
+					</a>
+				</div>
+
+				  <div class="thumbnail">
+					<a href="uk2.jpeg" target="_blank">
+					  <img src="uk2.jpeg" alt="UK" style="width:40%">
+					  <div class="caption">
+						<p>I went to Warner Bros. Studio Tour London – The Making of Harry Potter. It is a filmmaking exhibit. It returns the classic scene of the Harry Potter. If you are a Harry Potter lover, you should not miss it! I was crazy at that day!</p>
+					  </div>
+					</a>
+				</div>
+				  <div class="thumbnail">
+					<a href="https://en.wikipedia.org/wiki/Fish_and_chips" target="_blank">
+					  <img src="uk3.jpeg" alt="UK" style="width:40%">
+					  <div class="caption">
+						<p>This is fish and chips. It is a must again if you come to UK. It is a popular dish in UK. It is very tasty, and the size is really big! You will have to share with someone.</p>
+					  </div>
+					</a>
+				</div>
+			  </div>
+			</div>
+
+			</div>
+			
+			<div id="Singapore" >
+			<div class="grid-container">
+			<div class="item1">
+			<h2>Singapore</h2>
+			<h4>Singapore | 07/06/2019-11/06/2019</h4>
+			<p>I went to Singapore with my friends. We were all the 1st time going to Singapore. I like traveling with them!</p>
+			</div>
+
+			<div class="item2">
+			  <div id="Sing" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  <li data-target="#Sing" data-slide-to="0" class="active"></li>
+				  <li data-target="#Sing" data-slide-to="1"></li>
+				  <li data-target="#Sing" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+
+				  <div class="item active">
+					<img src="s1.jpeg" alt="Singapore" style="width:100%;">
+					<div class="carousel-caption">
+					  <p>We went to the Gardens by the Bay which is a nature park with the aim of raising the quality of life by enhancing greenery and flora in the city. I think that the design is new and special.</p>
+					</div>
+				  </div>
+
+				  <div class="item">
+					<img src="s2.jpeg" alt="Singapore" style="width:100%;">
+					<div class="carousel-caption">
+					  <p>We went to Universal Studio Singapore. The size of the park is not big and the rides inside are not really exciting but we still had a fun day.</p>
+					</div>
+				  </div>
+				
+				  <div class="item">
+					<img src="s3.jpeg" alt="Singapore" style="width:100%;">
+					<div class="carousel-caption">
+					  <p>This is Bak kut the which is a pork rib dish cooked in broth popularly served in Singapore. I like it very much but the taste of it is not generally accepted. But if you didn’t try it before, please go ahead. You might be surprised!</p>
+					</div>
+				  </div>
+			  
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#Sing" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#Sing" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+			</div>
+			</div>
+			</div>
+			
+			<div id="Korea" >
+			<div class="grid-container">
+			<div class="item1">
+			<h2>Korea</h2>
+			<h4>Korea, Seoul | 01/01/2019-07/01/2019</h4>
+			<p>I went to Seoul with my friend. It was the 2nd time I went to Seoul. I like Korea’s weather because it won't feel wet when comparing to Hong Kong.</p>
+			 </div>
+			 <div class="item2">
+				  <div class="thumbnail">
+					<a href="k1.jpeg" target="_blank">
+					  <img src="k1.jpeg" alt="UK" style="width:40%">
+					  <div class="caption">
+						<p>We went to Gyeongbokgung which was the main royal palace of the Joseon dynasty. We had borrowed hanbok for taking photo. It is common to see people wearing hanbok to the Gyeongbokgung because if people wearing hanbok, they don’t need to paid for the entrance fee.</p>
+					  </div>
+					</a>
+				</div>
+
+				  <div class="thumbnail">
+					<a href="k2.jpeg" target="_blank">
+					  <img src="k2.jpeg" alt="UK" style="width:40%">
+					  <div class="caption">
+						<p>We went to skiing on the 3rd day of the trip. It costs only HKD600 for the skiing day tour. There will be a coach teaching you. You don’t have to worry too much. It was the first time I go skiing!</p>
+					  </div>
+					</a>
+				</div>
+				  <div class="thumbnail">
+					<a href="https://en.wikipedia.org/wiki/Gimbap" target="_blank">
+					  <img src="k3.jpeg" alt="UK" style="width:40%">
+					  <div class="caption">
+						<p>This is Gimbap, a Korean dish made from cooked rice and other ingredients that are rolled in gim—dried sheets of laver seaweed—and served in bite-sized slices. Gimbap is very popular that you can easily find in Korea. I like it very much. I eat almost everyday.</p>
+					  </div>
+					</a>
+				</div>
+			  </div>
+			</div>
+
+			</div>
+			<footer>
+			<address>
+			Email Me: <a href="mailto:19018952D@connect.polyu.hk">19018952D@connect.polyu.hk</a>
+		</address>
+			</footer>
+			</div>
+		
+			
+			
+			
+			
+
+</body>
+</html>
